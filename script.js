@@ -161,3 +161,123 @@ for (let i = 0; i < zucchine.length; i++) {
 }
 
 console.log(totale);
+
+// Crea un array di oggetti che rappresentano degli animali.
+// Ogni animale ha un nome, una famiglia e una classe.
+// Es:
+
+// [
+//   { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+//   { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
+//   { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
+// ]
+
+// Crea un nuovo array con la lista dei mammiferi.
+// Bonus 1 : trasforma ogni valore di ogni animale in tutto maiuscolo tranne la prima lettera, tipo // leone => lEONE, canidi => cANIDI
+
+
+const animali = [
+    {
+        nome: 'leone', 
+        famiglia: 'felidi',
+        classe: 'mammiferi',
+    },
+    {
+        nome: 'cane', 
+        famiglia: 'canidi',
+        classe: 'mammiferi',
+    },
+    {
+        nome: 'gallina', 
+        famiglia: 'fasianidi',
+        classe: 'uccelli',
+    },
+    {
+        nome: 'gatto', 
+        famiglia: 'felidi',
+        classe: 'mammiferi',
+    },
+    {
+        nome: 'papera', 
+        famiglia: 'fasianidi',
+        classe: 'uccelli',
+    },
+    {
+        nome: 'tigre', 
+        famiglia: 'felidi',
+        classe: 'mammiferi',
+    }
+];
+
+const animaliMammiferi = animali.filter((animali) => animali.classe === 'mammiferi');
+console.log(animaliMammiferi);
+
+/***
+ * 
+Crea un array di oggetti che rappresentano delle persone.
+Ogni persona ha un nome, un cognome e un'età, creiamone almeno una decina.
+
+Crea quindi un nuovo array inserendo, per ogni persona, una frase con il nome e cognome e l'indicazione se può guidare, in base all'età.
+
+ */
+
+const persone = [
+    {
+        nome: 'tony',
+        cognome: 'soprano',
+        eta: 65
+    },
+    {
+        nome: 'gino',
+        cognome: 'di gino',
+        eta: 33
+    },
+    {
+        nome: 'pina',
+        cognome: 'rosetti',
+        eta: 14
+    },
+    {
+        nome: 'fabio',
+        cognome: 'trulli',
+        eta: 18
+    },
+    {
+        nome: 'armando',
+        cognome: 'secco',
+        eta: 80
+    },
+    {
+        nome: 'rocco',
+        cognome: 'barocco',
+        eta: 42
+    },
+    {
+        nome: 'gianni',
+        cognome: 'rotfl',
+        eta: 20
+    },
+    {
+        nome: 'marta',
+        cognome: 'de angelis',
+        eta: 16
+    },
+    {
+        nome: 'roberta',
+        cognome: 'miani',
+        eta: 4
+    },
+    {
+        nome: 'zoe',
+        cognome: 'smith',
+        eta: 12
+    }
+];
+
+const nuovePersone = persone.map((persone) => {
+    if (persone.eta < 18){
+        console.log(persone.nome, persone.cognome, 'non può guidare', persone.eta);
+    } else if (persone.eta >= 18){
+        console.log(persone.nome, persone.cognome, 'può guidare', persone.eta);
+    }
+});
